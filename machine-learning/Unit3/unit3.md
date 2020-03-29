@@ -58,7 +58,141 @@ Why so popular
 1. Large models are easier to train
 	1. Flexible neural "lego pieces"
 
-One hidden layer model
-With two layers and two nodes each one
+### Hidden layer models 
 * $z_i=\sum_{j=1}^2 (x_j*w_{ji}+W_{0i})$
 * $f_i=tanh(z_i)$
+
+![](image1.png)
+
+Neural signal transformation
+
+![](image2.png)
+
+#### Example Problem
+
+Hidden layer representation: the next graph shows two linear combinations, after been evaluated by function $f$ of the circled point, which is positve for f2 and negative for f1
+
+![](image3.png)
+
+Now for a positive positive point, in the middle
+
+![](image4.png)
+
+Positive for f1 and negative for f2
+
+![](image5.png)
+
+Now evaluating all of the points,we get 
+
+![](image6.png)
+
+Notice that this is not linear separable. To make it separable we should apply some function in this case tanh
+
+![](image7.png)
+
+And with ReLu, which is not strictly separable
+
+![](image8.png)
+
+But if we flip the functions positive side, with the tanh function we get
+
+![](image9.png)
+
+And with ReLu, which makes it linear separable 
+
+![](image10.png)
+
+With random hidden units
+
+![](image11.png)
+
+With more randomly choosesn hidden units activations. Is it separable on the $R^{10}$ space? 
+
+![](image12.png)
+
+Actually it is
+
+![](image13.png)
+
+#### Summary
+* Units in NN are linear classifiers, just with different output non-linearly
+* The units in feed-forward neural networks are arranged in layers (input, hidden, .., output)
+* By learnign the parameters associated with the hidden layer untis, we learn how to represent examples( as hiden layer activations)
+* The representaion in NN are learned directly to facilitate the end-to-end task
+* A simple classifier (output unit) suffices to solve comples classification tasks if it operates on the hidden layer representation
+
+#### Exercise 
+```
+import numpy as np
+import matplotlib.pyplot as plt
+# Data
+x = np.array([[-1, -1], [1, -1], [-1, 1], [1, 1]])
+y = np.array([1, -1, -1, 1])
+# Weights which change for each exercise
+w_0 = np.array([[1, 1]])
+w_0_g = np.tile(w_0.T, 4)
+w = np.array([[1, -1], [-1, 1]])
+# Outputs after the multiplication
+z = w_0_g + np.matmul(w.T, x.T)
+
+def relu(X):
+    return np.maximum(0,X)
+# Apply function to z. Try with tanh, relu and f(z)=z 
+f_z = z
+
+# Ploting
+colors = ['red' if xi > 0 else 'green' for xi in y]
+plt.scatter(f_z[0, :], f_z[1, :], c=colors)
+plt.show()
+```
+Here is what we get for one of the weights
+
+![](image14.png)
+
+The goal is to test with which parameters the output of $f(z)$ becomes linear separable
+
+## Feedforward Neural Networks, Back Propagation, and Stochastic Gradient Descent (SGD) 
+### 1. Objectives
+*  Write down recursive relations with back-propagation algorithm to compute the gradient of the loss function with respect to the weight parameters.
+* Use the stochastic descent algorithm to train a feedforward neural network.
+* Understand that it is not guaranteed to reach global (only local) optimum with SGD to minimize the training loss.
+* Recognize when a network has overcapacity . 
+
+### 2. Backpropagation 
+* Learning feed-forward NN
+* SGD and back-propagation
+
+Learning NN
+
+We want to update our weight values, base on the loss function gradient
+![](image15.png)
+
+Looking as a simple example 
+![](image16.png)
+
+Now applying back propagation to our example
+
+To change the variation of w1 that we have to apply, we need to find the derivative of Loss in function of w1. We can find it following the chain rule as the next image.
+![](image17.png)
+
+### Exercise
+
+![](image18.png)
+Let 𝜂 be the learning rate for the stochastic gradient descent algorithm.
+Recall that our goal is to tune the parameters of the neural network so as to minimize the loss function. Which of the following is the appropriate update rule for the paramter 𝑤1 in the stochastic gradient descent algorithm? 
+
+![](image19.png)
+![](image22.png)
+![](image20.png)
+![](image21.png)
+![](image23.png)
+![](image24.png)
+![](image25.png)
+![](image26.png)
+![](image27.png)
+![](image28.png)
+![](image29.png)
+![](image30.png)
+![](image31.png)
+
+
