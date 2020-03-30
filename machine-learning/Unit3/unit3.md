@@ -62,57 +62,57 @@ Why so popular
 * $z_i=\sum_{j=1}^2 (x_j*w_{ji}+W_{0i})$
 * $f_i=tanh(z_i)$
 
-![](image1.png)    
+<img src="image1.png" width="589px"/>    
 
 Neural signal transformation
 
-![](image2.png)  
+<img src="image2.png" width="589px"/>  
 
 #### Example Problem
 
 Hidden layer representation: the next graph shows two linear combinations, after been evaluated by function $f$ of the circled point, which is positve for f2 and negative for f1
 
-![](image3.png)    
+<img src="image3.png" width="589px"/>    
 
 Now for a positive positive point, in the middle
 
-![](image4.png)  
+<img src="image4.png" width="589px"/>  
 
 Positive for f1 and negative for f2
 
-![](image5.png)  
+<img src="image5.png" width="589px"/>  
 
 Now evaluating all of the points,we get 
 
-![](image6.png)  
+<img src="image6.png" width="589px"/>  
 
 Notice that this is not linear separable. To make it separable we should apply some function in this case tanh
 
-![](image7.png)  
+<img src="image7.png" width="589px"/>  
 
 And with ReLu, which is not strictly separable
 
-![](image8.png)  
+<img src="image8.png" width="589px"/>  
 
 But if we flip the functions positive side, with the tanh function we get
 
-![](image9.png)  
+<img src="image9.png" width="589px"/>  
 
 And with ReLu, which makes it linear separable 
 
-![](image10.png)  
+<img src="image10.png" width="589px"/>  
 
 With random hidden units
 
-![](image11.png)  
+<img src="image11.png" width="589px"/>  
 
 With more randomly choosesn hidden units activations. Is it separable on the $R^{10}$ space? 
 
-![](image12.png)  
+<img src="image12.png" width="589px"/>  
 
 Actually it is
 
-![](image13.png)  
+<img src="image13.png" width="589px"/>  
 
 #### Summary
 * Units in NN are linear classifiers, just with different output non-linearly
@@ -147,7 +147,7 @@ plt.show()
 ```
 Here is what we get for one of the weights
 
-![](image14.png)  
+<img src="image14.png" width="589px"/>  
 
 The goal is to test with which parameters the output of $f(z)$ becomes linear separable
 
@@ -166,65 +166,80 @@ Learning NN
 
 We want to update our weight values, base on the loss function gradient
 
-![](image15.png)  
+<img src="image15.png" width="589px"/>  
 
 Looking as a simple example 
 
-![](image16.png)  
+<img src="image16.png" width="589px"/>  
 
 Now applying back propagation to our example
 
 To change the variation of w1 that we have to apply, we need to find the derivative of Loss in function of w1. We can find it following the chain rule as the next image.
 
-![](image17.png)  
+<img src="image17.png" width="589px"/>  
 
 ### Exercise
 
-![](image18.png)  
+<img src="image18.png" width="589px"/>  
 
-Let 𝜂 be the learning rate for the stochastic gradient descent algorithm.
+Let $n$ be the learning rate for the stochastic gradient descent algorithm.
 Recall that our goal is to tune the parameters of the neural network so as to minimize the loss function. Which of the following is the appropriate update rule for the paramter 𝑤1 in the stochastic gradient descent algorithm? 
 
-![](image19.png)  
-![](image22.png)  
-![](image20.png)  
-![](image21.png)  
-![](image23.png)  
-![](image24.png)  
-![](image25.png)  
-![](image26.png)  
-![](image27.png)  
-![](image28.png)  
-![](image29.png)  
-![](image30.png)  
-![](image31.png)  
+<img src="image19.png" width="589px"/>  
+
+<img src="image22.png" width="589px"/>  
+
+<img src="image20.png" width="589px"/>  
+
+<img src="image21.png" width="589px"/>  
+
+<img src="image23.png" width="589px"/>  
+
+<img src="image24.png" width="589px"/>  
+
+<img src="image25.png" width="589px"/>  
+
+<img src="image26.png" width="589px"/>  
+
+<img src="image27.png" width="589px"/>  
+
+<img src="image28.png" width="589px"/>  
+
+<img src="image29.png" width="589px"/>  
+
+<img src="image30.png" width="589px"/>  
+
+<img src="image31.png" width="589px"/>  
 
 ### Training Models with one hidden layer
 
 With 2 hidden units
 
-![](image32.png)  
-![](image33.png)  
+<img src="image32.png" width="589px"/>  
+
+<img src="image33.png" width="589px"/>  
+
 Wint 10 hidden units
 
-![](image34.png)  
+<img src="image34.png" width="589px"/>  
 
 Now other example of data
 
-![](image35.png)  
+<img src="image35.png" width="589px"/>  
 
 To 100 hidden units, the up left line from the next image should't be there because is not useful
 
-![](image36.png)  
+<img src="image36.png" width="589px"/>  
 
 Now when lines are initialized on the origin(left) and when they are initialized randomly
 
-![](image37.png)  
+<img src="image37.png" width="589px"/>  
 
 Size and optimization
 
-![](image38.png)  
-![](image39.png)  
+<img src="image38.png" width="589px"/>  
+
+<img src="image39.png" width="589px"/>  
 
 #### Summary
 * NN can be learned with SGD similarly to linear classifiers
@@ -246,27 +261,35 @@ Goals
 
 #### Predict values based in historical (based on time) 
 
-![](image40.png)  
-![](image41.png)  
-![](image42.png)  
-![](image43.png)  
+<img src="image40.png" width="589px"/>  
+
+<img src="image41.png" width="589px"/>  
+
+<img src="image42.png" width="589px"/>  
+
+<img src="image43.png" width="589px"/>  
 
 #### Learning to encode 
 
-![](image44.png)  
-![](image45.png)  
-![](image46.png)  
+<img src="image44.png" width="589px"/>  
+
+<img src="image45.png" width="589px"/>  
+
+<img src="image46.png" width="589px"/>  
 
 #### Encoding with RNN
 
-![](image47.png)  
-![](image48.png)  
-![](image49.png)  
+<img src="image47.png" width="589px"/>  
+
+<img src="image48.png" width="589px"/>  
+
+<img src="image49.png" width="589px"/>  
 
 #### Gating and LSTM (Long short term memory)
 
-![](image50.png)  
-![](image51.png)  
+<img src="image50.png" width="589px"/>  
+
+<img src="image51.png" width="589px"/>  
 
 Key things
 * NN for sequences: encoding
@@ -299,46 +322,51 @@ Description
 
 Markov Language Models  
 
-![](image52.png)  
-![](image53.png)  
+<img src="image52.png" width="589px"/>  
+
+<img src="image53.png" width="589px"/>  
 
 Maximun likelihood estimation
 
-![](image54.png)  
-![](image55.png)  
+<img src="image54.png" width="589px"/>  
+
+<img src="image55.png" width="589px"/>  
 
 ### Markov Models to Feedforward Neural Nets
 Feature baed Markov Model
 * We can also represent the Markov model as a feedforward NN (very extendable)  
 
-![](image56.png)  
+<img src="image56.png" width="589px"/>  
 
 We can use two order Markov inserting past words (A trigram landuage model)
 
-![](image57.png)  
+<img src="image57.png" width="589px"/>  
 
 ### RNN for sequences
 
-![](image58.png)  
-![](image59.png)  
+<img src="image58.png" width="589px"/>  
+
+<img src="image59.png" width="589px"/>  
 
 Decoding, RNNs
 
-![](image60.png)  
-![](image61.png)  
+<img src="image60.png" width="589px"/>  
+
+<img src="image61.png" width="589px"/>  
 
 ### RNN Decoding
 Decoding into a sentence
 
-![](image62.png)  
+<img src="image62.png" width="589px"/>  
 
 Mapping images to text
 
-![](image63.png)  
+<img src="image63.png" width="589px"/>  
 
 Examples
 
-![](image64.png)  
+<img src="image64.png" width="589px"/>  
+
 #### Key things
 * Markov model for sequences
     * How to formulate, estimate, sample sequences from
