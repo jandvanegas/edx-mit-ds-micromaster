@@ -376,3 +376,61 @@ Examples
     * sampling from
 * Decoding vectors into sequences
 Help: [Activation Functions Graphs](https://adl1995.github.io/an-overview-of-activation-functions-used-in-neural-networks.html)
+
+## Convolutional Neural Networks
+
+Goals
+* Know the differences between feed-forward and Convolutional neural networks (CNNs).
+* Implement the key parts in the CNNs, including convolution , max pooling units.
+* Determine the dimension of each channel in different layers with a given CNNs. 
+
+### Introduction to Neural Networks
+Outline
+Convolutional NN
+* why not use unstructured feed-forward models? 
+* key parts: convolution, pooling
+* examples
+Our problem is image classification
+
+Using Feed-forward networks
+* Problems 2: too many parameters
+* Problems 1: Image objectos wouldn't be recognized if they move around.
+
+Patch classifier/filter
+Let's imagine that we have a 11x11 pixels image, and we apply a weight matrix with the same size. Then we apply a dot product between matrixes and at the end apply a ReLu activation function.To at the end get a simple scalar.
+
+<img src="image65.png" width="589px"/>  
+
+Convolution
+Let's apply the classifier to a bigger image, aroung the image. We'll get 
+* Local connectivity
+* Shared weight
+
+
+<img src="image66.png" width="589px"/>  
+
+This is how actually works
+
+<img src="image67.png" width="589px"/>  
+
+Pooling we want to recognize if something is in the image without caring where it is. Pooling is just take the max value in a matrix.
+
+<img src="image68.png" width="589px"/>  
+
+We don't want to just find a feature but many, so the second layer we'll have multiple feature maps. In the third layer we'll apply a pooling. Then, another features from them.
+
+<img src="image69.png" width="589px"/>  
+
+Here it's an illustration of an actual architecture that won the 2012 image Net competion
+
+<img src="image70.png" width="589px"/>  
+
+Example of this model
+
+
+<img src="image71.png" width="589px"/>  
+
+ConvNet Features
+
+<img src="image72.png" width="589px"/>  
+
