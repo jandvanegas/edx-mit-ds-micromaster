@@ -1,6 +1,7 @@
 # Summary
 
 ## Data Anaylis for Social Scientists
+* [Module 1](data-analysis-for-social-scientists/module-1/module1.md)
 * [Module 8](data-analysis-for-social-scientists/module-8/module8.md)
 
 ## Machine Learning
