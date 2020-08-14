@@ -159,7 +159,7 @@
 
 ![](image_79.jpg)
 
-## Moments of a Distribution
+## Moments of a Distribution and Auction
 
 ![](image_80.jpg)
 
@@ -323,7 +323,7 @@
 
 ![](image_160.jpg)
 
-### Expectation, Variance, and a Introduction to Regression
+## Expectation, Variance, and a Introduction to Regression
 
 
 ![](image_161.jpg)
