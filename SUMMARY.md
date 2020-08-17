@@ -5,6 +5,7 @@
 * [Module 2](data-analysis-for-social-scientists/module-2/module2.md)
 * [Module 3](data-analysis-for-social-scientists/module-3/module3.md)
 * [Module 4](data-analysis-for-social-scientists/module-4/module4.md)
+* [Module 5](data-analysis-for-social-scientists/module-5/module5.md)
 * [Module 8](data-analysis-for-social-scientists/module-8/module8.md)
 
 ## Machine Learning
