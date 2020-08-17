@@ -161,7 +161,7 @@
 
 ![](image_80.jpg)
 
-### The Sample mean, Central Limit Theorem, and Estimation
+## The Sample mean, Central Limit Theorem, and Estimation
 
 ![](image_81.jpg)
 
