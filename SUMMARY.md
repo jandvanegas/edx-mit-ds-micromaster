@@ -11,6 +11,7 @@
 * [Module 8](data-analysis-for-social-scientists/module-8/module8.md)
 * [Module 9](data-analysis-for-social-scientists/module-9/module9.md)
 * [Module 10](data-analysis-for-social-scientists/module-10/module10.md)
+* [Module 11](data-analysis-for-social-scientists/module-11/module11.md)
 
 ## Machine Learning
 * [Unit 3](machine-learning/Unit3/unit3.md)
